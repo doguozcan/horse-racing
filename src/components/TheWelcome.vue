@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>welcome to the horse racing</p>
+    <p class="text-5xl text-red-500">welcome to the horse racing</p>
   </div>
 </template>
 
