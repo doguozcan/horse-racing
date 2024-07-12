@@ -6,7 +6,6 @@
         class="bg-slate-500 p-5 m-5 rounded-lg"
         v-for="(horseInformation, horseIndex) in result"
         :key="horseIndex"
-        :raceIndex="index"
       >
         <ResultHorse
           :horseInformation="horseInformation"

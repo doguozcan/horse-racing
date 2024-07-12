@@ -1,6 +1,6 @@
 <template>
   <button
-    class="text-white px-4 py-2 rounded-full my-2 shadow-lg"
+    class="text-white px-4 py-2 rounded-full my-2 shadow-lg disabled:opacity-20"
     :class="{
       'bg-green-500 hover:bg-green-700 active:bg-green-400 shadow-green-700': type == 'start',
       'bg-red-500 hover:bg-red-700 active:bg-red-400 shadow-red-700': type == 'stop',

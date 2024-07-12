@@ -8,8 +8,10 @@ export default createStore({
     horses: [],
     program: [],
     currentResult: [],
+    currentTime: 0,
     results: [],
-    resultIndex: 0
+    resultIndex: 0,
+    raceInterval: null
   },
   mutations: {
     generateHorses(state) {
@@ -92,10 +94,17 @@ export default createStore({
         // after generating horses, generate current round
         state.program.push({ length: roundLengths[roundIndex], horses: tenHorses })
       }
+    },
+    setRaceInterval(state, data) {
+      state.raceInterval = data
+    },
+    stopRace(state) {
+      clearInterval(state.raceInterval)
+      state.raceInterval = null
     }
   },
   actions: {
-    async startRace({ state }) {
+    async startRace({ state, commit }) {
       // the average speed of a horse is approximately 48 km/h reference:https://www.hoofinhorse.com/horse-speed/
       // this means that an average horse can run approximately 13 meters per second
       // bold pilot's (gazi race's record holder) average speed was 16.41 meters per second reference: https://en.wikipedia.org/wiki/Bold_Pilot
@@ -137,6 +146,8 @@ export default createStore({
             }
           }
 
+          state.currentTime += 1
+
           if (roundOver) {
             // sort current result based on finish time
             state.currentResult.sort((a, b) => a.time - b.time)
@@ -158,18 +169,21 @@ export default createStore({
 
             // empty out the current results array
             state.currentResult = []
-          }
 
-          console.log(state.currentResult[0].time)
+            state.currentTime = 0
+          }
         } else {
-          clearInterval(interval)
+          commit('stopRace')
         }
-      }, 250)
+      }, 50)
+
+      commit('setRaceInterval', interval)
     }
   },
   getters: {
     horsesLength: (state) => state.horses.length,
     programLength: (state) => state.program.length,
-    resultsLength: (state) => state.results.length
+    resultsLength: (state) => state.results.length,
+    getRaceInterval: (state) => state.raceInterval
   }
 })
