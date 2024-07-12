@@ -1,19 +1,21 @@
 <template>
-  <div v-for="(program, index) in $store.state.program" :key="index">
-    <div>
-      <p>{{ program.length }}</p>
-      <div class="bg-red-600 m-2 p-2">
-        <div v-for="horse in program.horses" :key="horse.name">
-          <div class="bg-green-500 p-2 m-2">
-            <p>{{ horse.name }}</p>
-            <p>{{ horse.condition }}</p>
-          </div>
-        </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
+    <div v-for="(program, index) in $store.state.program" :key="index">
+      <div class="border p-4 rounded-lg">
+        <p class="text-xl">Program {{ index + 1 }} - {{ program.length }}m</p>
+        <HorsePosition
+          v-for="(horse, index) in program.horses"
+          :key="horse.name"
+          :name="horse.name"
+          :position="index + 1"
+        >
+        </HorsePosition>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import HorsePosition from './HorsePosition.vue'
 defineProps(['length', 'horses'])
 </script>
