@@ -201,6 +201,7 @@ export default createStore({
   },
   getters: {
     horsesLength: (state) => state.horses.length,
-    programLength: (state) => state.program.length
+    programLength: (state) => state.program.length,
+    resultsLength: (state) => state.results.length
   }
 })
