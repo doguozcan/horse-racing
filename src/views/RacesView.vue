@@ -5,6 +5,7 @@
     <GenerateProgram
       v-if="$store.getters.horsesLength !== 0 && $store.getters.programLength === 0"
     />
+    <StartRace v-if="$store.getters.programLength !== 0" />
   </div>
 </template>
 
@@ -12,4 +13,5 @@
 import GreetUser from '../components/GreetUser.vue'
 import GenerateHorses from '../components/GenerateHorses.vue'
 import GenerateProgram from '../components/GenerateProgram.vue'
+import StartRace from '../components/StartRace.vue'
 </script>
