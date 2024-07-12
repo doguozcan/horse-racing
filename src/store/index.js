@@ -6,7 +6,8 @@ import colorsList from '@/assets/colorsList'
 export default createStore({
   state: {
     horses: [],
-    program: []
+    program: [],
+    results: []
   },
   mutations: {
     generateHorses(state) {
@@ -81,6 +82,19 @@ export default createStore({
         // after generating horses, generate current round
         state.program.push({ length: roundLengths[roundIndex], horses: tenHorses })
       }
+    },
+    race(state) {
+      // the average speed of a horse is approximately 48 km/h reference:https://www.hoofinhorse.com/horse-speed/
+      // this means that an average horse can run approximately 13 meters per second
+      // bold pilot's (gazi race's record holder) average speed was 16.41 meters per second reference: https://en.wikipedia.org/wiki/Bold_Pilot
+      // in my algorithm, I will consider three more factors than just the condition
+      // the first condition is a chance factor: a horse may perform exceptionally well and run one of its best races
+      // the second condition is the fatigue factor: despite a horse's good health condition, it may be tired due to previous races
+      // the third and final factor is track suitability: a horse may perform well over shorter distances but may not perform as well over longer distances or vice-versa or well on both distances
+      // we need to fine-tune these conditions carefully to ensure a fair race
+      // current speed of the horse should be like this
+      // average horse speed (which is 13) + (condition * 0.03) - (fatigue * 0.2) + suitability + chance
+      // note that these values and percentages can be changed optionally
     }
   },
   getters: {
