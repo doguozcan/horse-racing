@@ -164,39 +164,7 @@ export default createStore({
         state.currentResult = []
       }
 
-      console.log(state.results[0][0].meter, state.results[0][0].time)
-      console.log(state.results[0][0].horse)
-
-      console.log(state.results[0][1].meter, state.results[0][1].time)
-      console.log(state.results[0][1].horse)
-
-      console.log(state.results[0][2].meter, state.results[0][2].time)
-      console.log(state.results[0][2].horse)
-
-      console.log(state.results[0][3].meter, state.results[0][3].time)
-      console.log(state.results[0][3].horse)
-
-      console.log(state.results[0][4].meter, state.results[0][4].time)
-      console.log(state.results[0][4].horse)
-
-      console.log(state.results[0][5].meter, state.results[0][5].time)
-      console.log(state.results[0][5].horse)
-
-      console.log(state.results[0][6].meter, state.results[0][6].time)
-      console.log(state.results[0][6].horse)
-
-      console.log(state.results[0][7].meter, state.results[0][7].time)
-      console.log(state.results[0][7].horse)
-
-      console.log(state.results[0][8].meter, state.results[0][8].time)
-      console.log(state.results[0][8].horse)
-
-      console.log(state.results[0][9].meter, state.results[0][9].time)
-      console.log(state.results[0][9].horse)
-
-      for (let i = 0; i < 20; i++) {
-        console.log(state.horses[i])
-      }
+      console.log(state.results[0][0])
     }
   },
   getters: {

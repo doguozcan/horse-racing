@@ -8,6 +8,7 @@
     <WarningMessage v-if="$store.getters.programLength !== 0 && $store.getters.resultsLength === 0">
       No round is completed yet
     </WarningMessage>
+    <ResultsList v-if="$store.getters.resultsLength !== 0" />
   </div>
 </template>
 
