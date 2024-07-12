@@ -14,9 +14,6 @@
         >Stop the race</ButtonComponent
       >
     </div>
-    <div>
-      <p class="text-2xl">Time {{ $store.state.currentTime }}</p>
-    </div>
   </div>
 </template>
 
