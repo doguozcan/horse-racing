@@ -12,4 +12,3 @@
 <script setup>
 defineProps(['name', 'condition', 'colorName', 'colorCode'])
 </script>
-div

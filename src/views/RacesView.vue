@@ -1,7 +1,9 @@
 <template>
-  <RacesGreeting />
+  <div class="flex flex-col items-center">
+    <GreetUser>Welcome to the Races!</GreetUser>
+  </div>
 </template>
 
 <script setup>
-import RacesGreeting from '../components/RacesGreeting.vue'
+import GreetUser from '../components/GreetUser.vue'
 </script>
