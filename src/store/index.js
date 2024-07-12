@@ -35,7 +35,7 @@ export default createStore({
         // generate horses suitability for different lengths
         let suitability = []
         for (let i = 0; i < 6; i++) {
-          suitability.push(Math.ceil(Math.random()))
+          suitability.push(Math.floor(Math.random() * 100))
         }
 
         // randomly generate color index
@@ -131,9 +131,9 @@ export default createStore({
               state.currentResult[horseIndex].time += 1
               state.currentResult[horseIndex].meter +=
                 13 +
-                state.currentResult[horseIndex].horse.condition * 0.03 -
+                state.currentResult[horseIndex].horse.condition * 0.025 -
                 state.currentResult[horseIndex].horse.totalRaces * 0.2 +
-                state.currentResult[horseIndex].horse.suitability[state.resultIndex] +
+                state.currentResult[horseIndex].horse.suitability[state.resultIndex] * 0.01 +
                 Math.random()
 
               // if current horse not finished its round, continue
