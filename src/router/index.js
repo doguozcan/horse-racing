@@ -5,10 +5,10 @@ import Program from '../views/ProgramView.vue'
 import Results from '../views/ResultsView.vue'
 
 const routes = [
-  { path: '/', component: Horses },
-  { path: '/races', component: Races },
-  { path: '/program', component: Program },
-  { path: '/results', component: Results }
+  { path: '/', name: 'Horses', component: Horses },
+  { path: '/races', name: 'Races', component: Races },
+  { path: '/program', name: 'Program', component: Program },
+  { path: '/results', name: 'Results', component: Results }
 ]
 
 export default createRouter({

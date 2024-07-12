@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-center">
-    <GreetUser>Welcome to the horses!</GreetUser>
+    <GreetUser />
     <HorseGrid v-if="$store.getters.horsesLength > 0" />
     <GenerateHorses v-if="$store.getters.horsesLength === 0" />
   </div>

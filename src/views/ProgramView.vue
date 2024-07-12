@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-center">
-    <GreetUser>Welcome to the Program!</GreetUser>
+    <GreetUser />
     <GenerateProgram
       v-if="$store.getters.horsesLength !== 0 && $store.getters.programLength === 0"
     />

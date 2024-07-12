@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-center">
-    <GreetUser>Welcome to the Results!</GreetUser>
+    <GreetUser />
   </div>
 </template>
 
