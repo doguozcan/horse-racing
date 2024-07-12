@@ -184,6 +184,7 @@ export default createStore({
     horsesLength: (state) => state.horses.length,
     programLength: (state) => state.program.length,
     resultsLength: (state) => state.results.length,
-    getRaceInterval: (state) => state.raceInterval
+    getRaceInterval: (state) => state.raceInterval,
+    getCurrentRoundLength: (state) => [1200, 1400, 1600, 1800, 2000, 2200][state.resultIndex]
   }
 })
