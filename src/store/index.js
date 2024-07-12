@@ -5,7 +5,8 @@ import colorsList from '@/assets/colorsList'
 
 export default createStore({
   state: {
-    horses: []
+    horses: [],
+    program: []
   },
   mutations: {
     generateHorses(state) {
@@ -50,9 +51,40 @@ export default createStore({
         // append horse to the horses array
         state.horses.push(horse)
       }
+    },
+    generateProgram(state) {
+      // define round lengths respectively
+      const roundLengths = [1200, 1400, 1600, 1800, 2000, 2200]
+
+      for (let roundIndex = 0; roundIndex < 6; roundIndex++) {
+        // create a copy of horses
+        const horsesCopy = state.horses.slice()
+
+        // initialize empty horses array
+        let tenHorses = []
+
+        // select 10 horses randomly
+        for (let horseIteration = 0; horseIteration < 10; horseIteration++) {
+          // get horse index randomly
+          const horseIndex = Math.floor(Math.random() * horsesCopy.length)
+
+          // get randomly selected horse
+          const randomHorse = horsesCopy[horseIndex]
+
+          // append randomly selected horse in ten horses
+          tenHorses.push(randomHorse)
+
+          // remove selected horse from current array
+          horsesCopy.splice(horseIndex, 1)
+        }
+
+        // after generating horses, generate current round
+        state.program.push({ length: roundLengths[roundIndex], horses: tenHorses })
+      }
     }
   },
   getters: {
-    horsesLength: (state) => state.horses.length
+    horsesLength: (state) => state.horses.length,
+    programLength: (state) => state.program.length
   }
 })
