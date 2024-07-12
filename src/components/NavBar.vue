@@ -24,6 +24,7 @@ import { RouterLink } from 'vue-router'
 const navBarItems = [
   { path: '/', label: 'Horses' },
   { path: '/races', label: 'Races' },
-  { path: '/program-and-results', label: 'Program & Results' }
+  { path: '/program', label: 'Program' },
+  { path: '/results', label: 'Results' }
 ]
 </script>

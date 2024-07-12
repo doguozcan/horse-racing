@@ -1,11 +1,11 @@
 <template>
   <div class="flex flex-col items-center">
-    <GreetUser>Welcome to the Program & Results!</GreetUser>
-    <RaceProgram v-if="$store.getters.programLength > 0" />
+    <GreetUser>Welcome to the Program!</GreetUser>
     <GenerateProgram
       v-if="$store.getters.horsesLength !== 0 && $store.getters.programLength === 0"
     />
     <GenerateHorses v-if="$store.getters.horsesLength === 0" />
+    <RaceProgram v-if="$store.getters.programLength > 0" />
   </div>
 </template>
 

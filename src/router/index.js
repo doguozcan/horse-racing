@@ -1,21 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Horses from '../views/HorsesView.vue'
 import Races from '../views/RacesView.vue'
-import ProgramAndResults from '../views/ProgramAndResultsView.vue'
+import Program from '../views/ProgramView.vue'
+import Results from '../views/ResultsView.vue'
 
 const routes = [
-  {
-    path: '/',
-    component: Horses
-  },
-  {
-    path: '/races',
-    component: Races
-  },
-  {
-    path: '/program-and-results',
-    component: ProgramAndResults
-  }
+  { path: '/', component: Horses },
+  { path: '/races', component: Races },
+  { path: '/program', component: Program },
+  { path: '/results', component: Results }
 ]
 
 export default createRouter({
