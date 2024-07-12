@@ -1,5 +1,5 @@
 <template>
-  <ButtonComponent @click="$store.commit('startRace')">Start the race</ButtonComponent>
+  <ButtonComponent @click="$store.dispatch('startRace')">Start the race</ButtonComponent>
 </template>
 
 <script setup>
