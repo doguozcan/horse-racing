@@ -3,7 +3,7 @@
     <h1>No program at the moment!</h1>
     <p>Do you want to generate right now?</p>
   </div>
-  <ButtonComponent @click="$store.commit('generateProgram')">Yes</ButtonComponent>
+  <ButtonComponent type="yes" @click="$store.commit('generateProgram')">Yes</ButtonComponent>
 </template>
 
 <script setup>
