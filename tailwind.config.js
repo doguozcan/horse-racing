@@ -5,6 +5,11 @@ export default {
     extend: {
       fontFamily: {
         montserrat: ['Montserrat']
+      },
+      colors: {
+        gold: '#FFD700',
+        silver: '#C0C0C0',
+        bronze: '#CD7F32'
       }
     }
   },
