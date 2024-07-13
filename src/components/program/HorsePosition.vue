@@ -7,10 +7,12 @@
     >
       {{ position }}
     </div>
-    <p>{{ name }}</p>
+    <PTag>{{ name }}</PTag>
   </div>
 </template>
 
 <script setup>
+import PTag from '../common/PTag.vue'
+
 defineProps(['name', 'position'])
 </script>
