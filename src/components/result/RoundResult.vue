@@ -15,7 +15,7 @@
 
 <script setup>
 import H1Tag from '../common/H1Tag.vue'
-import ResultHorse from '../ResultHorse.vue'
+import ResultHorse from './ResultHorse.vue'
 
 defineProps(['result', 'index'])
 </script>
