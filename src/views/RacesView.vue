@@ -7,7 +7,7 @@
 
 <script setup>
 import GenerateHorses from '../components/horse/GenerateHorses.vue'
-import GenerateProgram from '../components/GenerateProgram.vue'
+import GenerateProgram from '../components/program/GenerateProgram.vue'
 import StartRace from '../components/StartRace.vue'
 import RaceTrack from '../components/RaceTrack.vue'
 </script>

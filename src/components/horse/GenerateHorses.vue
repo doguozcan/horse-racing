@@ -1,14 +1,13 @@
 <template>
-  <QuestionCard v-if="$store.getters.horsesLength === 0">
-    <H1Tag>No horse at the moment!</H1Tag>
-    <PTag>Do you want to generate them right now?</PTag>
-    <ButtonComponent @click="$store.commit('generateHorses')">Yes</ButtonComponent>
-  </QuestionCard>
+  <GenerateComponent
+    message="No horses available at the moment!"
+    question="Would you like to generate them right now?"
+    :activity="() => $store.commit('generateHorses')"
+    buttonMessage="Yes 🐎"
+    v-if="$store.getters.horsesLength === 0"
+  />
 </template>
 
 <script setup>
-import QuestionCard from '../common/QuestionCard.vue'
-import H1Tag from '../common/H1Tag.vue'
-import PTag from '../common/PTag.vue'
-import ButtonComponent from '../common/ButtonComponent.vue'
+import GenerateComponent from '../common/GenerateComponent.vue'
 </script>

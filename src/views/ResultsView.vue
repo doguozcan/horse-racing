@@ -8,7 +8,7 @@
 </template>
 
 <script setup>
-import GenerateProgram from '../components/GenerateProgram.vue'
+import GenerateProgram from '../components/program/GenerateProgram.vue'
 import GenerateHorses from '../components/horse/GenerateHorses.vue'
 import WarningMessage from '../components/WarningMessage.vue'
 import ResultsList from '../components/ResultsList.vue'
