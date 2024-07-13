@@ -1,8 +1,10 @@
 <template>
   <!-- displaying biger font on larger screens -->
-  <p class="sm:text-lg">Name: {{ name }}</p>
+  <PTag>Name: {{ name }}</PTag>
 </template>
 
 <script setup>
+import PTag from '../common/PTag.vue'
+
 defineProps(['name'])
 </script>
