@@ -17,5 +17,5 @@
 </template>
 
 <script setup>
-import HorseCard from '../HorseCard.vue'
+import HorseCard from './HorseCard.vue'
 </script>
