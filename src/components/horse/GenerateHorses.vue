@@ -10,5 +10,5 @@
 import QuestionCard from '../common/QuestionCard.vue'
 import H1Tag from '../common/H1Tag.vue'
 import PTag from '../common/PTag.vue'
-import ButtonComponent from '../ButtonComponent.vue'
+import ButtonComponent from '../common/ButtonComponent.vue'
 </script>

@@ -18,5 +18,5 @@
 </template>
 
 <script setup>
-import ButtonComponent from '../components/ButtonComponent.vue'
+import ButtonComponent from './common/ButtonComponent.vue'
 </script>
