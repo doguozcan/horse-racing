@@ -1,9 +1,9 @@
 <template>
+  <GenerateHorses />
   <HorsesTable />
-  <GenerateHorses v-if="$store.getters.horsesLength === 0" />
 </template>
 
 <script setup>
+import GenerateHorses from '../components/horse/GenerateHorses.vue'
 import HorsesTable from '../components/horse/HorsesTable.vue'
-import GenerateHorses from '../components/GenerateHorses.vue'
 </script>

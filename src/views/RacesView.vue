@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-import GenerateHorses from '../components/GenerateHorses.vue'
+import GenerateHorses from '../components/horse/GenerateHorses.vue'
 import GenerateProgram from '../components/GenerateProgram.vue'
 import StartRace from '../components/StartRace.vue'
 import RaceTrack from '../components/RaceTrack.vue'
