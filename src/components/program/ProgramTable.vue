@@ -12,5 +12,5 @@
 </template>
 
 <script setup>
-import RoundProgram from '../RoundProgram.vue'
+import RoundProgram from './RoundProgram.vue'
 </script>

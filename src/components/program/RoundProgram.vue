@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-import H1Tag from './common/H1Tag.vue'
+import H1Tag from '../common/H1Tag.vue'
 import HorsePosition from './HorsePosition.vue'
 
 defineProps(['program', 'index'])
