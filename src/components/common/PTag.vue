@@ -1,6 +1,6 @@
 <template>
-  <!-- main paragraph component, adjust text size in larger screens -->
-  <p class="sm:text-lg">
+  <!-- main paragraph component -->
+  <p class="font-light">
     <slot />
   </p>
 </template>

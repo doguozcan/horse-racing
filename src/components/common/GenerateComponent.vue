@@ -2,7 +2,7 @@
   <QuestionCard>
     <H1Tag>{{ message }}</H1Tag>
     <PTag>{{ question }}</PTag>
-    <ButtonComponent @click="activity">{{ buttonMessage }}</ButtonComponent>
+    <ButtonComponent type="default" @click="activity">{{ buttonMessage }}</ButtonComponent>
   </QuestionCard>
 </template>
 
