@@ -1,10 +1,12 @@
 <template>
   <div class="flex flex-col items-center" v-if="$store.getters.programLength !== 0">
-    <H1Tag v-if="$store.getters.resultsLength !== 6">Good luck to all jockeys and horses! 🍀</H1Tag>
-    <H1Tag v-if="$store.getters.resultsLength === 6"
+    <H1Tag class="text-center" v-if="$store.getters.resultsLength !== 6"
+      >Good luck to all jockeys and horses! 🍀</H1Tag
+    >
+    <H1Tag class="text-center mb-2 sm:mb-4" v-if="$store.getters.resultsLength === 6"
       >Congratulations to every single jockey and horse! 🎉</H1Tag
     >
-    <H1Tag v-if="$store.getters.resultsLength === 6">
+    <H1Tag class="text-center" v-if="$store.getters.resultsLength === 6">
       You can navigate to the
       <RouterLink
         to="/results"
