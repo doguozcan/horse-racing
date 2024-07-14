@@ -8,7 +8,7 @@ export default createStore({
     horses: [],
     program: [],
     currentResult: [],
-    currentTime: 0,
+    currentTime: '0.0',
     results: [],
     resultIndex: 0,
     raceInterval: null
@@ -101,12 +101,15 @@ export default createStore({
     stopRace(state) {
       clearInterval(state.raceInterval)
       state.raceInterval = null
+    },
+    incrementCurrentTime(state) {
+      state.currentTime = (parseFloat(state.currentTime) + 0.1).toFixed(1)
     }
   },
   actions: {
     async startRace({ state, commit }) {
       // the average speed of a horse is approximately 48 km/h reference:https://www.hoofinhorse.com/horse-speed/
-      // this means that an average horse can run approximately 13 meters per second
+      // this means that an average horse can run approximately 13 meters per second in other words 1.3 meters per 100ms
       // bold pilot's (gazi race's record holder) average speed was 16.41 meters per second reference: https://en.wikipedia.org/wiki/Bold_Pilot
       // in my algorithm, I will consider three more factors than just the condition
       // the first condition is a chance factor: a horse may perform exceptionally well and run one of its best races
@@ -114,7 +117,7 @@ export default createStore({
       // the third and the final factor is track suitability: a horse may perform well over shorter distances but may not perform as well over longer distances or vice-versa or well on both distances
       // we need to fine-tune these conditions carefully to ensure a fair race
       // current speed of the horse should be like this
-      // average horse speed (which is 13) + (condition * 0.03) - (fatigue * 0.2) + suitability + chance (values might be change)
+      // average horse speed (which is 1.3 m in 100ms) + (condition * 0.003) - (fatigue * 0.1) + suitability + chance (between 0 and 0.01) (values might be optimized)
 
       // if the rounds are not finished yet
       const interval = setInterval(() => {
@@ -137,16 +140,16 @@ export default createStore({
             if (state.currentResult[horseIndex].meter < state.program[state.resultIndex].length) {
               state.currentResult[horseIndex].time += 1
               state.currentResult[horseIndex].meter +=
-                13 +
-                state.currentResult[horseIndex].horse.condition * 0.025 -
-                state.currentResult[horseIndex].horse.totalRaces * 0.2 +
-                state.currentResult[horseIndex].horse.suitability[state.resultIndex] * 0.01 +
-                Math.random()
+                1.3 +
+                state.currentResult[horseIndex].horse.condition * 0.003 -
+                state.currentResult[horseIndex].horse.totalRaces * 0.1 +
+                state.currentResult[horseIndex].horse.suitability[state.resultIndex] * 0.001 +
+                Math.random() * 0.01
               roundOver = false
             }
           }
 
-          state.currentTime += 1
+          commit('incrementCurrentTime')
 
           if (roundOver) {
             // sort current result based on finish time
@@ -175,7 +178,7 @@ export default createStore({
         } else {
           commit('stopRace')
         }
-      }, 100)
+      }, 250)
 
       commit('setRaceInterval', interval)
     }
