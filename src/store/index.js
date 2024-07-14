@@ -175,7 +175,7 @@ export default createStore({
         } else {
           commit('stopRace')
         }
-      }, 250)
+      }, 100)
 
       commit('setRaceInterval', interval)
     }

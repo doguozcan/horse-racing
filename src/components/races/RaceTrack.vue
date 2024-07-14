@@ -1,5 +1,5 @@
 <template>
-  <div v-if="$store.getters.programLength !== 0">
+  <div v-if="$store.getters.programLength !== 0 && $store.getters.resultsLength !== 6">
     <div class="m-2">
       <div class="bg-green-800 h-80 w-[400px] sm:w-[550px] md:w-[700px] lg:w-[850px]">
         <RacingHorse
@@ -32,6 +32,7 @@ const updateCurrentPixel = () => {
 }
 
 onMounted(() => {
+  updateCurrentPixel()
   window.addEventListener('resize', updateCurrentPixel)
 })
 
