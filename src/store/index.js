@@ -117,7 +117,7 @@ export default createStore({
       // the third and the final factor is track suitability: a horse may perform well over shorter distances but may not perform as well over longer distances or vice-versa or well on both distances
       // we need to fine-tune these conditions carefully to ensure a fair race
       // current speed of the horse should be like this
-      // average horse speed (which is 1.3 m in 100ms) + (condition * 0.003) - (fatigue * 0.1) + suitability + chance (between 0 and 0.01) (values might be optimized)
+      // average horse speed (which is 1.3 m in 100ms) + (condition * 0.004) - (fatigue * 0.01) + (suitability * 0.001) + chance (between 0 and 0.01) (values might be optimized)
 
       // if the rounds are not finished yet
       const interval = setInterval(() => {
@@ -141,8 +141,8 @@ export default createStore({
               state.currentResult[horseIndex].time += 1
               state.currentResult[horseIndex].meter +=
                 1.3 +
-                state.currentResult[horseIndex].horse.condition * 0.003 -
-                state.currentResult[horseIndex].horse.totalRaces * 0.1 +
+                state.currentResult[horseIndex].horse.condition * 0.004 -
+                state.currentResult[horseIndex].horse.totalRaces * 0.01 +
                 state.currentResult[horseIndex].horse.suitability[state.resultIndex] * 0.001 +
                 Math.random() * 0.01
               roundOver = false
