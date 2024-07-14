@@ -2,7 +2,13 @@
 
 ## About 🔎
 
-About horse racing.
+Horse Racing is an app where users can simulate randomly generated competitions. Users can generate 20 horses in a completely random manner. With these randomly created horses, users can create rounds where horses compete. Users can watch the simulation of the race and dynamically start and stop the it.
+
+## What is special about this app? 💎
+
+- Modularity is highly considered in this app. Components are broken down into smaller code pieces.
+- The do not repeat yourself principle is strongly emphasized to avoid code duplication.
+- The software design and implementation are maintainable. New features can be added simply, or existing features can be changed instantaneously.
 
 ## Implementation 🛠️
 
@@ -36,7 +42,7 @@ https://github.com/user-attachments/assets/a4802a7f-c2a8-49fa-9654-effe81030bb6
 
 - **<a href="https://vuejs.org/guide/introduction.html">Vue.js's official documentation</a>**
 - **<a href="https://vuejs.org/tutorial/#step-1">Vue.js's official tutorial</a>**
-- **<a href="https://vueschool.io/">Vue Shool (Official Vue document's recommendation )</a>**
+- **<a href="https://vueschool.io/">Vue Shool (Official Vue document's recommendation)</a>**
 - **<a href="https://vuex.vuejs.org/guide/">Vuex's official documentation</a>**
 - **<a href="https://vitejs.dev/guide/">Vite's official documentation</a>**
 - **<a href="https://tailwindcss.com/docs/installation">Tailwind's official documentation</a>**
