@@ -7,6 +7,7 @@
   <StartRace />
   <!-- share informations about the current race such as meter and time -->
   <RaceInformation />
+  <!-- simulate a horse race at the hippodrome -->
   <RaceTrack />
 </template>
 
