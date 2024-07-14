@@ -2,7 +2,7 @@
 
 ## About 🔎
 
-Horse Racing is an app where users can simulate randomly generated competitions. Users can generate 20 horses in a completely random manner. With these randomly created horses, users can create rounds where horses compete. Users can watch the simulation of the race and dynamically start and stop the it.
+Horse Racing is an app where users can simulate randomly generated competitions. Users can generate 20 horses in a completely random manner. With these randomly created horses, users can create rounds where horses compete. Users can watch the simulation of the race and dynamically start and stop it.
 
 ## What is special about this app? 💎
 
@@ -30,6 +30,12 @@ Users can view the results of each round on a leaderboard. This displays informa
 
 https://github.com/user-attachments/assets/a4802a7f-c2a8-49fa-9654-effe81030bb6
 
+### The LightHouse Report
+
+I obtained the following lighthouse report where performance, accessibility, best practices, and SEO rankings are all green.
+
+![horse-racing-lighthouse](https://github.com/user-attachments/assets/6c2bbd50-9a3e-4a4c-8b65-9ebdfa9bb0ab)
+
 ## Technologies used 🤖
 
 - **<a href="https://vuejs.org/">Vue.js</a>**
@@ -49,4 +55,4 @@ https://github.com/user-attachments/assets/a4802a7f-c2a8-49fa-9654-effe81030bb6
 
 ## Live Preview 🌐
 
-- You can visit <a href="https://example.com">the live preview</a>
+- You can visit <a href="https://starlit-lollipop-3c278d.netlify.app/">the live preview</a>
