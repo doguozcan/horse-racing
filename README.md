@@ -11,6 +11,11 @@ Users can generate 20 completely different horses by randomly mixing 40 adjectiv
 
 https://github.com/user-attachments/assets/608869d6-f999-475f-a3e5-a0d21572b233
 
+### Generating Program
+Users can generate 6 rounds of races, each including distances of 1200m, 1400m, 1600m, 1800m, 2000m, and 2200m, with each race featuring 10 randomly selected horses from a pool of 20 horses.
+
+https://github.com/user-attachments/assets/a1958366-2283-4297-b25f-ba738c803834
+
 ## Technologies used 🤖
 
 - **<a href="https://vuejs.org/">Vue.js</a>**
