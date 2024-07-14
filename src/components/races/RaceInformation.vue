@@ -1,7 +1,7 @@
 <template>
   <div
     class="flex flex-col items-center bg-slate-900 p-2 rounded-xl my-2 w-2/3 max-w-sm"
-    v-if="$store.getters.programLength !== 0"
+    v-if="$store.getters.programLength !== 0 && $store.getters.resultsLength !== 6"
   >
     <div class="flex items-center justify-center gap-2 w-2/3">
       <RaceClock />

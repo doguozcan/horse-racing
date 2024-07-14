@@ -2,7 +2,10 @@
   <div class="flex flex-col items-center" v-if="$store.getters.programLength !== 0">
     <BeforeAndAfterRaceMessages />
     <!-- start button is disabled when race is already running -->
-    <div class="flex flex-row gap-2 sm:gap-4 mt-2 sm:mt-4">
+    <div
+      class="flex flex-row gap-2 sm:gap-4 mt-2 sm:mt-4"
+      v-if="$store.getters.resultsLength !== 6"
+    >
       <ButtonComponent
         :disabled="$store.getters.getRaceInterval !== null"
         type="start"
