@@ -8,6 +8,8 @@ import Program from '../views/ProgramView.vue'
 import Races from '../views/RacesView.vue'
 // results view where users can observe the outcomes of the races
 import Results from '../views/ResultsView.vue'
+// 404 component
+import PageNotFound from '../views/PageNotFound.vue'
 
 // define all the application routes
 const routes = [
@@ -18,7 +20,9 @@ const routes = [
   // route for the races view
   { path: '/races', name: 'Races', component: Races, meta: { title: 'Races' } },
   // route for the results view
-  { path: '/results', name: 'Results', component: Results, meta: { title: 'Results' } }
+  { path: '/results', name: 'Results', component: Results, meta: { title: 'Results' } },
+  // 404
+  { path: '/:pathMatch(.*)*', name: 'Page Not Found', component: PageNotFound }
 ]
 
 // router instance with the history mode
