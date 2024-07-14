@@ -2,7 +2,7 @@
 
 ## About 🔎
 
-Horse Racing is an app where users can simulate randomly generated competitions. Users can generate 20 horses in a completely random manner. With these randomly created horses, users can create rounds where horses compete. Users can watch the simulation of the race and dynamically start and stop the it.
+Horse Racing is an app where users can simulate randomly generated competitions. Users can generate 20 horses in a completely random manner. With these randomly created horses, users can create rounds where horses compete. Users can watch the simulation of the race and dynamically start and stop it.
 
 ## What is special about this app? 💎
 
@@ -49,4 +49,4 @@ https://github.com/user-attachments/assets/a4802a7f-c2a8-49fa-9654-effe81030bb6
 
 ## Live Preview 🌐
 
-- You can visit <a href="https://example.com">the live preview</a>
+- You can visit <a href="https://starlit-lollipop-3c278d.netlify.app/">the live preview</a>
