@@ -2,7 +2,7 @@
   <div class="flex flex-col items-center space-x-4 bg-slate-600 p-5 m-5 rounded-lg">
     <HorseRanking :horseIndex="horseIndex" />
     <PTag>{{ horseInformation.horse.name }}</PTag>
-    <PTag>Time: {{ horseInformation.time }}s</PTag>
+    <PTag>Time: {{ (parseFloat(horseInformation.time) / 10).toFixed(1) }}s</PTag>
     <HorseInformationAfterRace :horseInformation="horseInformation" :raceIndex="raceIndex" />
   </div>
 </template>
