@@ -16,6 +16,11 @@ Users can generate 6 rounds of races, each including distances of 1200m, 1400m, 
 
 https://github.com/user-attachments/assets/a1958366-2283-4297-b25f-ba738c803834
 
+### Displaying Results
+Users can view the results of each round on a leaderboard. This displays information such as the horse's name, finish time, condition, suitability for the current round, and total number of races.
+
+https://github.com/user-attachments/assets/a4802a7f-c2a8-49fa-9654-effe81030bb6
+
 ## Technologies used 🤖
 
 - **<a href="https://vuejs.org/">Vue.js</a>**
