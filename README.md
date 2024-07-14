@@ -30,6 +30,12 @@ Users can view the results of each round on a leaderboard. This displays informa
 
 https://github.com/user-attachments/assets/a4802a7f-c2a8-49fa-9654-effe81030bb6
 
+### The LightHouse Report
+
+I obtained the following lighthouse report where performance, accessibility, best practices, and SEO rankings are all green.
+
+![horse-racing-lighthouse](https://github.com/user-attachments/assets/6c2bbd50-9a3e-4a4c-8b65-9ebdfa9bb0ab)
+
 ## Technologies used 🤖
 
 - **<a href="https://vuejs.org/">Vue.js</a>**
