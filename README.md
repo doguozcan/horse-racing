@@ -6,7 +6,10 @@ About horse racing.
 
 ## Implementation 🛠️
 
-About implementation
+### Generating Horses
+Users can generate 20 completely different horses by randomly mixing 40 adjectives, 40 nouns, and 40 colors. The uniqueness of all horse information is guaranteed.
+
+https://github.com/user-attachments/assets/608869d6-f999-475f-a3e5-a0d21572b233
 
 ## Technologies used 🤖
 
