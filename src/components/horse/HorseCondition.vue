@@ -5,23 +5,23 @@
     {{
       condition === 100
         ? '🔟'
-        : condition > 90
+        : condition >= 90
           ? '9️⃣'
-          : condition > 80
+          : condition >= 80
             ? '8️⃣'
-            : condition > 70
+            : condition >= 70
               ? '7️⃣'
-              : condition > 60
+              : condition >= 60
                 ? '6️⃣'
-                : condition > 50
+                : condition >= 50
                   ? '5️⃣'
-                  : condition > 40
+                  : condition >= 40
                     ? '4️⃣'
-                    : condition > 30
+                    : condition >= 30
                       ? '3️⃣'
-                      : condition > 20
+                      : condition >= 20
                         ? '2️⃣'
-                        : condition > 10
+                        : condition >= 10
                           ? '1️⃣'
                           : '0️⃣'
     }}</PTag
